@@ -21,7 +21,7 @@ const QuestionPage = () => {
     const navigate = useNavigate();
 
     const fetchData = async () => {
-        const response = await fetch(`/questions/${params.id}`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${login ? login.token : ''}`
