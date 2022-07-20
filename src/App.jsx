@@ -18,6 +18,7 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
+            <Route path='/' element={<Home />} />
             <Route path='/questions' element={<Home />} />
             <Route path='/addquestion' element={<AddQuestion />} />
             <Route path='/register' element={<Register />} />
