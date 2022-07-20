@@ -5,7 +5,7 @@ const Question = (props) => {
     const shortenedBody = props.data.post_body.substring(0, 100);
 
     return (
-        <Link style={{ textDecoration: "none" }} to={`https://synthusiast.herokuapp.com/questions/${props.data.post_id}`}>
+        <Link style={{ textDecoration: "none" }} to={`/questions/${props.data.post_id}`}>
         {
             props.data.isArchived === '1' ? null :
             props.data.isDeletedByAdmin === 'false' &&

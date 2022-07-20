@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
 
     return (
-        <Link to={`https://synthusiast.herokuapp.com/questions/${props.data.post_id}`}>
+        <Link to={`/questions/${props.data.post_id}`}>
             <div className="card-container">
                 <span style={{}}>
                     {props.data.post_title}
