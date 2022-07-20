@@ -29,7 +29,7 @@ const AddQuestion = () => {
             body: e.target.body.value
         }
 
-        const response = await fetch('/addquestion', {
+        const response = await fetch('https://synthusiast.herokuapp.com/addquestion', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const AddQuestion = () => {
         const json = await response.json();
         if (response.ok) {
             toast.success('Added question successfully');
-            navigate(`/questions/${json.id}`)
+            navigate(`https://synthusiast.herokuapp.com/questions/${json.id}`)
         } else {
             toast.error(json.error)
         }

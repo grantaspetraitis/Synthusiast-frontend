@@ -36,7 +36,7 @@ const Register = () => {
                 password: e.target.password.value
             }
 
-            const response = await fetch('/register', {
+            const response = await fetch('https://synthusiast.herokuapp.com/register', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
@@ -46,7 +46,7 @@ const Register = () => {
 
             if (response.ok) {
                 toast.success('Registered successfully')
-                navigate('/login')
+                navigate('https://synthusiast.herokuapp.com/login')
             } else {
                 const json = await response.json();
                 toast.error(json.error)

@@ -23,7 +23,7 @@ const AnswerCard = (props) => {
     }
 
     const onDelete = async (e) => {
-        const response = await fetch(`/questions/${params.id}/answers/${props.answer_id}`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}/answers/${props.answer_id}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

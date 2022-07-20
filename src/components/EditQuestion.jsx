@@ -31,7 +31,7 @@ const EditQuestion = (props) => {
             body: e.target.body.value
         }
 
-        const response = await fetch(`/questions/${params.id}`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",

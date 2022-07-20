@@ -12,7 +12,7 @@ const Profile = () => {
     const { login } = useContext(AppContext);
 
     const fetchData = async () => {
-        const response = await fetch('/profile', {
+        const response = await fetch('https://synthusiast.herokuapp.com/profile', {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${login.token}`

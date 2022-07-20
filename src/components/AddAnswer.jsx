@@ -24,7 +24,7 @@ const AddAnswer = (props) => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`/questions/${props.post_id}/answers`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${props.post_id}/answers`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

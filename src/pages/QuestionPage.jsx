@@ -32,7 +32,7 @@ const QuestionPage = () => {
     }
 
     const fetchAnswers = async () => {
-        const response = await fetch(`/questions/${params.id}/answers`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}/answers`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${login ? login.token : ''}`
@@ -43,7 +43,7 @@ const QuestionPage = () => {
     }
 
     const onClick = async (rating) => {
-        const response = await fetch(`/questions/${params.id}/rate`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}/rate`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const QuestionPage = () => {
     }
 
     const onAdminDelete = async (e) => {
-        const response = await fetch(`/questions/${params.id}`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -78,12 +78,12 @@ const QuestionPage = () => {
         })
         if (response.ok) {
             toast.success('Successfully deleted post')
-            navigate('/questions')
+            navigate('https://synthusiast.herokuapp.com/questions')
         }
     }
 
     const onDelete = async (e) => {
-        const response = await fetch(`/questions/${params.id}`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -93,12 +93,12 @@ const QuestionPage = () => {
         })
         if (response.ok) {
             toast.success('Successfully deleted your post');
-            navigate('/questions')
+            navigate('https://synthusiast.herokuapp.com/questions')
         }
     }
 
     const onAnswerLikeClick = async (rating, id) => {
-        const response = await fetch(`/questions/${params.id}/rateanswer`, {
+        const response = await fetch(`https://synthusiast.herokuapp.com/questions/${params.id}/rateanswer`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

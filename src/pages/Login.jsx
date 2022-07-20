@@ -32,7 +32,7 @@ const Login = () => {
             password: e.target.password.value
         }
 
-        const response = await fetch('/login', {
+        const response = await fetch('https://synthusiast.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json'
@@ -44,7 +44,7 @@ const Login = () => {
 
         if(response.ok) {
             toast.success('Logged in successfully')
-            navigate('/questions')
+            navigate('https://synthusiast.herokuapp.com/questions')
             setLogin({
                 username: json.username,
                 token: json.token,
