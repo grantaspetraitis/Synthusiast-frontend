@@ -46,7 +46,7 @@ const Register = () => {
 
             if (response.ok) {
                 toast.success('Registered successfully')
-                navigate('https://synthusiast.herokuapp.com/login')
+                navigate('/login')
             } else {
                 const json = await response.json();
                 toast.error(json.error)

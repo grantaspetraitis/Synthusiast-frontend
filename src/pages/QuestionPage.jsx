@@ -78,7 +78,7 @@ const QuestionPage = () => {
         })
         if (response.ok) {
             toast.success('Successfully deleted post')
-            navigate('https://synthusiast.herokuapp.com/questions')
+            navigate('/questions')
         }
     }
 
@@ -93,7 +93,7 @@ const QuestionPage = () => {
         })
         if (response.ok) {
             toast.success('Successfully deleted your post');
-            navigate('https://synthusiast.herokuapp.com/questions')
+            navigate('/questions')
         }
     }
 

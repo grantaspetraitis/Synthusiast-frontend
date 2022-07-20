@@ -44,7 +44,7 @@ const Login = () => {
 
         if(response.ok) {
             toast.success('Logged in successfully')
-            navigate('https://synthusiast.herokuapp.com/questions')
+            navigate('/questions')
             setLogin({
                 username: json.username,
                 token: json.token,

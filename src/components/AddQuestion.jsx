@@ -41,7 +41,7 @@ const AddQuestion = () => {
         const json = await response.json();
         if (response.ok) {
             toast.success('Added question successfully');
-            navigate(`https://synthusiast.herokuapp.com/questions/${json.id}`)
+            navigate(`/questions/${json.id}`)
         } else {
             toast.error(json.error)
         }
