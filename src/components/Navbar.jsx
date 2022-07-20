@@ -21,13 +21,13 @@ const Navbar = () => {
                 {login ? (
                     <>
                         <li>
-                            <Link to="https://synthusiast.herokuapp.com/addquestion">Ask a question</Link>
+                            <Link to="/addquestion">Ask a question</Link>
                         </li>
                         <li>
-                            <Link to="https://synthusiast.herokuapp.com/questions">Forum</Link>
+                            <Link to="/questions">Forum</Link>
                         </li>
                         <li>
-                            <Link to="https://synthusiast.herokuapp.com/profile">My profile</Link>
+                            <Link to="/profile">My profile</Link>
                         </li>
                         <li>
                             <span style={{ cursor: "pointer" }} onClick={logout}>Log out</span>
@@ -38,13 +38,13 @@ const Navbar = () => {
                 ) : (
                     <>
                         <li>
-                            <Link to="https://synthusiast.herokuapp.com/questions">Forum</Link>
+                            <Link to="/questions">Forum</Link>
                         </li>
                         <li>
-                            <Link to="https://synthusiast.herokuapp.com/login">Login</Link>
+                            <Link to="/login">Login</Link>
                         </li>
                         <li>
-                            <Link to="https://synthusiast.herokuapp.com/register">Register</Link>
+                            <Link to="/register">Register</Link>
                         </li>
                     </>
                 )}
