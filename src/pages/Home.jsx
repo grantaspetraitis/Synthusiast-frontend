@@ -8,7 +8,7 @@ const Home = () => {
     const [select, setSelect] = useState('new-first');
 
     const fetchData = async () => {
-        const response = await fetch('/questions')
+        const response = await fetch('https://synthusiast.herokuapp.com/questions')
         const json = await response.json();
         setQuestions(json);
     }
