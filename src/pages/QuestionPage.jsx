@@ -159,7 +159,7 @@ const QuestionPage = () => {
                                     </>
                                 }
                                 {login && login.role === 'admin' && <button className="btn" style={{ marginLeft: 10 }} onClick={onAdminDelete}>Delete post as admin</button>}
-                                <span style={{ marginLeft: 20 }}>{question[0].post_date.substring(0, 16)}</span>
+                                <span style={{ marginLeft: 20 }}>{question[0].post_date.substring(0, 16).replace('T', ' ')}</span>
                             </>
                         ) :
                             <div className="spinner"></div>
